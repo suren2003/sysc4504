@@ -11,16 +11,139 @@ body {
    box-sizing: border-box;
    background-color: #e4e7eb;
    font-weight: 300;
+   padding: 40px;
+}
+section {
+   width: 910px;
+   box-shadow: 0 2px 4px rgba(47, 59, 64, 0.35);
+   background-color: #e4e7eb;
 }
 header {
    margin-left: 20px;
+   font-size: 18px;
 }
 h1 { 
    text-align: center;
    font-weight: 600;
-   font-size: 42px;
+   font-size: 36px;
    padding: 10px 0;
 }
-
-/* add styles here */
-
+h2 {
+   font-weight: 600;
+   font-size: 36px;
+}
+h3 {
+   font-weight: 800;
+   font-size: 24px;
+}
+.column h3 {
+   text-align: center;
+}
+.price {
+   font-weight: 800;
+   font-size: 36px;
+   color: black;
+   padding: 15px 20px;
+   margin: 15px -20px;
+   text-align: center;
+   width: 300px;
+}
+.price.free {
+   background-color: #5BB189;
+}
+.price.standard {
+   color: white;
+   background-color: #4B0082;
+}
+.price.professional {
+   background-color: #EC632A;
+}
+.price span {
+   font-weight: 400;
+   font-size: 18px;
+}
+ul li {
+   font-weight: 400;
+   font-size: 18px;
+   padding: 8px 0;
+}
+.column ul li {
+   padding: 8px 20px;
+   margin-left: -20px;
+   margin-right: -20px;
+   width: 300px;
+   text-align: center;
+}
+.column ul li span {
+   font-weight: 800;
+}
+.column {
+   display: inline-block;
+   width: 300px;
+   background-color: white;
+   padding: 20px;
+   margin-bottom: 0;
+   font-size: 16px;
+}
+.column.featured {
+   background-color: #2F4F4F;
+   color: white;
+}
+ul {
+   list-style-type: none;
+}
+.column ul li:nth-child(even) {
+   background-color: rgba(47, 59, 64, 0.35);
+}
+.column div {
+   text-align: center;
+   margin-top: 15px;
+   margin-left: -20px;
+   margin-right: -20px;
+}
+.column div a {
+   display: inline-block;
+   background-color: #3A6BA5;
+   color: white;
+   text-decoration: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   width: 290px;
+   margin-left: 5px;
+   margin-right: 5px;
+}
+.column div a:visited {
+   background-color: #3A6BA5;
+   color: white;
+}
+.column div a:hover {
+   background-color: #437CBF;
+   color: white;
+}
+#confidence {
+   background-color: #2F4F4F;
+   padding: 20px;
+   margin-top: 30px;
+   color: white;
+   width: 910px;
+}
+#confidence h2 {
+   color: white;
+}
+#confidence p {
+   color: white;
+   margin-bottom: 20px;
+}
+#confidence ul li a {
+   color: lightskyblue;
+   text-decoration: underline;
+}
+#confidence ul li {
+   background-image: url("checkmark.svg");
+   background-size: 24px;
+   background-repeat: no-repeat;
+   padding-left: 35px;
+   margin-bottom: 10px;
+}
