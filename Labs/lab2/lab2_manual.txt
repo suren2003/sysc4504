@@ -1,0 +1,79 @@
+Carleton University
+Department of Systems and Computer Engineering
+SYSC 4504 – Fundamentals of Web Development
+Winter 2026
+
+Lab 2: Working with CSS
+
+==================================================
+LAB ASSIGNMENT
+==================================================
+
+This project requires some CSS styling. The focus here is on working with box properties.
+
+You can download a ZIP file from Brightspace that contains three files:
+- an image (checkmark.svg)
+- an HTML document (lab02.html)
+- a style sheet (lab02.css)
+
+You need to modify lab02.css only, following the step-by-step instructions below.
+
+==================================================
+INSTRUCTIONS
+==================================================
+
+1. Examine lab02.html in a browser and then in the editor of your choice.
+   Do not make any changes to this file.
+
+2. Edit the file lab02.css by defining styles so that it looks similar to that
+   shown in the figure on the next page. The steps below provide more details.
+
+3. Add about 40px padding to the <body>.
+   Set the width of the <section> to 910px.
+   You will need a variety of different text styling, using a variety of
+   different font sizes and font weights, as shown in the figure.
+
+4. Each of the column <div> elements must have its display property set to
+   inline-block. This will allow the <div> elements to sit together on the
+   same line.
+
+   Later in the course, covering Chapter 7 in the textbook, you will learn
+   other techniques for achieving this effect.
+
+   Also set some of the other column properties to the values shown in the
+   figure. The second column will have a different background color.
+
+   Remove the list bullets by setting the list-style-type to none.
+
+5. For the list items within each column, make every second item a different
+   color using the nth-child pseudo selector.
+
+   Use the rgba() function, which will darken the underlying background color.
+
+6. Specify the link, visited, and hover formatting of the Sign Up link.
+   Notice the rounded corners and the box shadow.
+
+7. For the bottom “confidence” <div>, the list items have a background image
+   (checkmark.svg).
+
+   Set the background-size property to 24px.
+
+   The padding-left and the margin of each <li> item will have to be modified
+   so they don’t overlap the checkmark image.
+
+   Remove the bullet from each list item.
+
+CSS can be overwhelming at times. The instructions above break the task down
+into smaller steps. Test each step along the way in a browser.
+
+It’s not important that your page matches exactly the image shown in the
+figure below, but try to get it pretty similar.
+
+==================================================
+SUBMISSION
+==================================================
+
+Submit your solution on Brightspace, under Lab 2 Assignment in the submodule
+for this lab.
+
+You only need to submit lab02.css.
