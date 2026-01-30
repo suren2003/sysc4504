@@ -1,0 +1,265 @@
+SYSC 4504 – ALLOWED CONCEPTS AND FEATURES
+This file defines what is explicitly allowed to be used.
+Anything not listed here must NOT be used.
+
+--------------------------------------------------
+GENERAL RULE
+--------------------------------------------------
+
+Only HTML and CSS concepts explicitly covered in the provided lectures are permitted.
+No JavaScript.
+No external libraries.
+No frameworks.
+No advanced or modern features not shown in lecture material.
+
+--------------------------------------------------
+HTML: DOCUMENT STRUCTURE (Chapter 3)
+--------------------------------------------------
+
+Allowed:
+- <!DOCTYPE html>
+- <html> element (optional but allowed)
+- lang attribute on <html>
+- <head>
+- <meta charset="utf-8">
+- <title>
+- <link rel="stylesheet" href="...">
+- <body>
+
+Rules:
+- Proper nesting is required
+- Every opening tag must have a closing tag (except empty elements)
+- Semantic structure only (no visual intent in HTML)
+
+--------------------------------------------------
+HTML: BASIC CONTENT ELEMENTS (Chapter 3)
+--------------------------------------------------
+
+Allowed:
+- Headings: <h1> through <h6>
+- Paragraphs: <p>
+- Text content only inside body
+- <div> as a generic container
+- <span> for inline grouping
+
+--------------------------------------------------
+HTML: IMAGES (Chapter 3 & 6)
+--------------------------------------------------
+
+Allowed:
+- <img> element
+- src attribute
+- alt attribute (required for accessibility)
+- width and height via CSS (not required in HTML)
+
+Not allowed:
+- <picture>
+- srcset
+- responsive image features not shown in lectures
+
+--------------------------------------------------
+HTML: TABLES (Chapter 5)
+--------------------------------------------------
+
+Allowed:
+- <table>
+- <tr>
+- <td>
+- <th>
+- <thead>
+- <tbody>
+- <tfoot>
+- <caption>
+- colspan
+- rowspan
+
+Rules:
+- Tables must represent tabular data
+- Tables must not be used for layout
+- Each row must have the correct number of cells
+- Header cells must use <th>
+
+--------------------------------------------------
+HTML: FORMS (Chapter 5)
+--------------------------------------------------
+
+Allowed form container:
+- <form>
+  - action attribute
+  - method attribute (GET or POST)
+
+Allowed form controls:
+- <input type="text">
+- <input type="radio">
+- <input type="checkbox">
+- <input type="submit">
+- <button>
+- <select>
+- <option>
+- <label>
+- <fieldset>
+- <legend>
+
+Allowed attributes:
+- name
+- value
+- placeholder
+- checked
+- selected
+- type
+
+Rules:
+- Radio buttons must share the same name
+- Checkbox arrays must use name="index[]"
+- Button type="button" is allowed and covered
+- GET vs POST behavior must follow lecture definitions
+
+--------------------------------------------------
+HTML: QUERY STRINGS (Chapter 5)
+--------------------------------------------------
+
+Allowed:
+- GET query strings
+- name=value pairs
+- & separator
+- Array syntax for checkboxes
+
+--------------------------------------------------
+CSS: LOCATION OF STYLES (Chapter 4)
+--------------------------------------------------
+
+Allowed:
+- External CSS only (.css file)
+- <link rel="stylesheet">
+
+Not allowed:
+- Inline styles
+- Embedded <style> blocks
+
+--------------------------------------------------
+CSS: SELECTORS (Chapter 4)
+--------------------------------------------------
+
+Allowed selectors:
+- Element selectors (p, table, th, td, etc.)
+- Class selectors (.className)
+- ID selectors (#idName)
+- Grouped selectors (comma-separated)
+- Universal selector (*)
+- Attribute selectors:
+  - [attribute]
+  - [attribute="value"]
+  - [attribute^=value]
+  - [attribute$=value]
+  - [attribute*=value]
+
+--------------------------------------------------
+CSS: PROPERTIES (Chapter 4 & 5)
+--------------------------------------------------
+
+Allowed property categories:
+- Color:
+  - named colors
+  - rgb()
+  - rgba()
+  - hex colors
+  - hsl()/hsla()
+- Background:
+  - background-color
+  - background-image (including gradients)
+- Text:
+  - font-family
+  - font-size
+  - font-weight
+  - text-align
+- Box model:
+  - margin
+  - padding
+  - border
+  - border-collapse
+  - width
+  - height
+- Display:
+  - display: block
+  - display: inline
+  - display: inline-block
+  - display: none
+
+--------------------------------------------------
+CSS: TABLE STYLING (Chapter 5)
+--------------------------------------------------
+
+Allowed:
+- border
+- border-collapse
+- background-color
+- padding
+- text-align
+
+Allowed pseudo-classes:
+- :hover
+- :nth-child()
+
+--------------------------------------------------
+CSS: POSITIONING & LAYOUT (as introduced)
+--------------------------------------------------
+
+Allowed:
+- display property
+- float (left, right)
+- clear
+- position:
+  - static
+  - relative
+  - absolute
+  - fixed
+- top, left, right, bottom
+
+Rules:
+- Floated elements must have width
+- Absolute positioning requires a positioned ancestor
+
+--------------------------------------------------
+CSS: FLEXBOX & GRID
+--------------------------------------------------
+
+Only allowed if explicitly used in lectures up to the assignment date.
+
+Allowed flexbox properties if used:
+- display: flex
+- flex-direction
+- flex-wrap
+- justify-content
+- align-items
+- flex-grow
+- flex-shrink
+- flex-basis
+
+Allowed grid properties if used:
+- display: grid
+- grid-template-columns
+- gap
+- repeat()
+
+If unsure whether flexbox or grid is permitted for the assignment,
+DO NOT use them.
+
+--------------------------------------------------
+NOT ALLOWED (EXPLICITLY)
+--------------------------------------------------
+
+- JavaScript of any kind
+- Frameworks (Bootstrap, Tailwind, etc.)
+- CSS animations beyond lecture examples
+- CSS variables (unless explicitly provided)
+- Media queries
+- Advanced HTML5 inputs (date, email, range, etc.)
+- ARIA attributes not covered
+- Any feature not shown or mentioned in lecture slides
+
+--------------------------------------------------
+FINAL RULE
+--------------------------------------------------
+
+If a feature, element, attribute, selector, or property is not explicitly listed above,
+it must NOT be used.

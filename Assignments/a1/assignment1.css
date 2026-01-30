@@ -1,60 +1,162 @@
-
 /* general text formatting */
 
-
 body {
-   font-family: 'Roboto', Arial, sans-serif;
-   font-size: 16px;
-   font-weight: 300;
-   margin: 3px 0 0 0
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 3px 0 0 0;
+  background-color: var(--color-neutral-200);
 }
-h1, h2, h3, nav, footer {
-   font-weight: 500;
-  }
-
+h1,
+h2,
+h3,
+nav,
+footer {
+  font-weight: 500;
+}
 
 legend {
-   background-color: var(--color-primary-1-900) ;
-   color: var(--color-primary-1-050);
-   margin: 0 auto;
-   width: 90%;
-   padding: 0.25em;
-   text-align: center;
-   font-weight: 500;
-   font-size: 24px;
+  background-color: var(--color-primary-1-900);
+  color: var(--color-primary-1-050);
+  margin: 0 auto;
+  width: 90%;
+  padding: 4px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
 }
 fieldset {
-   margin: 0.5em auto;
-   background-color: var(--color-neutral-050);
-   border: solid 1px var(--color-neutral-100);
-   width: 90%;
+  margin: 8px auto;
+  background-color: var(--color-neutral-050);
+  border: solid 1px var(--color-neutral-200);
+  width: 90%;
+  padding: 16px;
 }
 
-div#searchBox, div#settingsBox, div#paintingBox {
-   background-color: var(--color-neutral-100);
-
+div#searchBox,
+div#settingsBox,
+div#paintingBox {
+  background-color: var(--color-neutral-100);
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border: solid 1px var(--color-neutral-100);
 }
 
-
-
-div#paintingBox { 
-
-   background-color: var(--color-neutral-100);
-   }
-
-
-
-table thead {
-   background-color: var(--color-primary-1-050) ;
+div#searchBox input[type="text"],
+div#searchBox span,
+div#searchBox input[type="radio"],
+div#searchBox label,
+div#searchBox select,
+div#searchBox input[type="submit"] {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
+div#searchBox input[type="text"] {
+  width: 320px;
+  padding: 6px 6px;
+  border: none;
+  border-radius: 4px;
+}
+
+div#searchBox select,
+div#settingsBox select {
+  padding: 6px 6px;
+  border: none;
+  border-radius: 4px;
+}
+
+div#settingsBox select,
+div#settingsBox input[type="submit"] {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  background-color: var(--color-primary-1-600);
+  color: var(--color-primary-1-050);
+  border: 1px solid var(--color-primary-1-700);
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color-primary-1-700);
+}
+
+div#paintingBox table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-neutral-050);
+}
 
 caption {
-   background-color: var(--color-primary-1-800);
-   color: var(--color-primary-1-050);
-
+  background-color: var(--color-primary-1-800);
+  color: var(--color-primary-1-050);
+  padding: 8px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
 }
 
+table thead {
+  background-color: var(--color-primary-1-100);
+}
 
+table th,
+table td {
+  border: none;
+  padding: 8px;
+  text-align: left;
+}
 
+table thead th {
+  background-color: var(--color-primary-1-100);
+  color: var(--color-primary-1-900);
+  font-weight: 500;
+}
 
+table tbody tr {
+  background-color: var(--color-neutral-100);
+}
+
+table tbody td:nth-child(2) {
+  text-align: center;
+  width: 110px;
+}
+
+table tbody td:nth-child(2) img {
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid var(--color-neutral-300);
+}
+
+div#paintingBox table td button {
+  padding: 4px;
+  border: 1px solid var(--color-neutral-300);
+  background-color: var(--color-neutral-050);
+  vertical-align: middle;
+}
+
+div#paintingBox table td button:hover {
+  background-color: var(--color-neutral-200);
+}
+
+div#paintingBox table td button.edit-btn {
+  background-color: var(--color-primary-1-400);
+  border-color: var(--color-primary-1-600);
+}
+
+div#paintingBox table td button.edit-btn:hover {
+  background-color: var(--color-primary-1-500);
+}
+
+div#paintingBox table td button img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
