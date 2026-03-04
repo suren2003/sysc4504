@@ -28,8 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     sliderBox.addEventListener("input", event => {
         if (event.target.tagName !== "INPUT") return;
 
-
-        // to have multiple filters active at once, we need to write each value we changing to the style, so we need to read and re write every attribute
+        // to have multiple filters active at once, we need to write each with a space in between at one time, so we need to read and re write every attribute
         const opacity = document.querySelector("#sliderOpacity").value;
         const saturation = document.querySelector("#sliderSaturation").value;
         const brightness = document.querySelector("#sliderBrightness").value;
