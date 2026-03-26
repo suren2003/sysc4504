@@ -1,5 +1,5 @@
 <?php
-
+// Suren Kulasegaram, 101220595
 include 'includes/travel-config.inc.php';
 
 try {
@@ -12,6 +12,7 @@ try {
 
    $id = (int) $_GET['id'];
 
+   // some camera details were missing, so just in case some city details are missing, I left joined the cities, so its not crucial
    $sql = "
       SELECT 
          i.ImageID,
@@ -82,7 +83,7 @@ catch (PDOException $e) {
    <main class="detail">
       <div>
          <img src="<?php echo $baseDetailUrl . $image['Path']; ?>" alt="<?php echo htmlspecialchars($image['Title']); ?>">
-      </div>
+      </div>         <!-- htmlspecialchars make sure that html doesn't see my output text as code and tries to run it, I don' think it's really necessary here, but good practice I guess -->
       <div>
          <h1><?php echo htmlspecialchars($image['Title']); ?></h1>
          <h3><?php echo htmlspecialchars($image['CityName']); ?>, <?php echo htmlspecialchars($image['CountryName']); ?></h3>

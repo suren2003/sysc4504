@@ -1,5 +1,5 @@
 <?php
-
+// Suren Kulasegaram, 101220595
 if (isset($_GET['reset'])) {
     header("Location: assignment3.php");            // on reset press we redirect back to assignment3.php without any url variables set from the form
     exit;
@@ -14,6 +14,7 @@ try {
     $sql = "SELECT ContinentCode, ContinentName FROM Continents ORDER BY ContinentName";
     $result = $pdo->query($sql);
 
+    // c.ISO is an shorthand for the Countries table, i is shorthand for ImageDetails table
     $sqlCountries = "
         SELECT c.ISO, c.CountryName
         FROM Countries c
@@ -44,16 +45,13 @@ try {
         $sqlImages .= " WHERE Title LIKE " . $pdo->quote('%' . $title . '%');
     }
 
-    $sqlImages .= " ORDER BY Title";
+    $sqlImages .= " ORDER BY ImageID";
 
     $resultImages = $pdo->query($sqlImages);
 }
 catch (PDOException $e) {
     die($e->getMessage());
 }
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +73,7 @@ catch (PDOException $e) {
           <div class="form-inline">
           <select name="continent">
             <option value="0">Select Continent</option>
-            <?php while ($row = $result->fetch()) { ?>
+            <?php while ($row = $result->fetch()) { ?>                                              <!-- Fetch from query result until we go thru all of them -->
                 <option value="<?php echo $row['ContinentCode']; ?>"
                     <?php if ($continent == $row['ContinentCode']) echo 'selected'; ?>>            <!-- Keep continent selected saved after submit -->
                     <?php echo $row['ContinentName']; ?>
@@ -94,7 +92,7 @@ catch (PDOException $e) {
           </select>
           <input type="text" placeholder="Search title" name="title" value="<?php echo htmlspecialchars($title); ?>">       <!-- Keeps title saved after submitting -->
           <button type="submit" class="btn-primary">Filter</button>
-          <button type="submit" name="reset" value="1" class="btn-secondary">Reset</button>             <!-- This button value will tell us that we need to redirect to assignment3.php to clear any url variables -->
+          <button type="submit" name="reset" class="btn-secondary">Reset</button>             <!-- This button will tell us that we need to redirect to assignment3.php to clear any url variables -->
           </div>
         </form>
     </header>   
@@ -104,7 +102,7 @@ catch (PDOException $e) {
           <?php while ($row = $resultImages->fetch()) { ?>
               <li>
                   <a href="detail.php?id=<?php echo $row['ImageID']; ?>">
-                      <img src="images/square150/<?php echo $row['Path']; ?>" alt="<?php echo $row['Title']; ?>">
+                      <img src="images/square150/<?php echo $row['Path']; ?>" alt="<?php echo $row['Title']; ?>">         <!-- These photos are stored locally in images to make load time faster -->
                   </a>
               </li>
           <?php } ?>
