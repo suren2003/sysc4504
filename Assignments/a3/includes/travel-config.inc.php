@@ -2,7 +2,7 @@
 <?php
 
 define('DBHOST', 'localhost');
-define('DBNAME', 'name here');
+define('DBNAME', 'travel');
 define('DBUSER', 'testuser');
 define('DBPASS', 'mypassword');
 //define('DBCONNSTRING','sqlite:./art.db');
