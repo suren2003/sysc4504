@@ -1,0 +1,48 @@
+<!-- Suren Kulasegaram, 101220595 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 6</title>
+    <script src="script.js" type="text/JavaScript"></script>
+</head>
+<body>
+    <div id="makePage">
+        <h1 id="title">QuickPoll Question Registration</h1>
+
+        <form id="questionForm">
+            <div>What is your question?</div>
+            <input type="text" id="question" name="question">
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="votePage">
+        <h1 id="title">QuickPoll Vote</h1>
+
+        <form id="voteForm">
+            <div id="prompt"></div>
+            <label>
+                <input type="radio" name="voteAnswer" value="yes">
+                Yes
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="voteAnswer" value="no">
+                No
+            </label>
+            <br>
+            <button type="submit">Cast your vote</button>
+        </form>
+    </div>
+    <div id="tallyPage">
+        <h1 id="title">QuickPoll Tally</h1>
+        <div>Your answer has been registerd. The current totals are:</div>
+        <div id="yesStat"></div>
+        <div id="noStat"></div>
+        <button id="voteAgainBtn">Vote Again</button>               <!-- No form, so don't need type=submit here -->
+        <button id="newQuestionBtn">Register a new question</button>
+    </div>
+</body>
+</html>
